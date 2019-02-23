@@ -128,6 +128,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BrokenBeltRideController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MemorialRideController.cs" />
     <Compile Include="Controllers\TermsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -150,6 +151,10 @@
     <Content Include="Images\bike_in_shed.jpg" />
     <Content Include="Images\broken_belt.jpg" />
     <Content Include="Images\chain.jpg" />
+    <Content Include="Images\trev.jpg" />
+    <Content Include="Images\trev_bikes.jpg" />
+    <Content Include="Images\trev_table.jpg" />
+    <Content Include="Images\trev_wave_rock.jpg" />
     <Content Include="Images\working.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -181,6 +186,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\BrokenBeltRide\RideInfo.cshtml" />
     <Content Include="Views\Terms\Terms.cshtml" />
+    <Content Include="Views\MemorialRide\MemorialRideInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

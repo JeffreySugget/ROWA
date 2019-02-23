@@ -39,3 +39,10 @@ textarea {
 .navbar-inverse .navbar-brand {
 	color: black !important;
 }
+
+.center {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
