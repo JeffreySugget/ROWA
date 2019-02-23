@@ -151,6 +151,7 @@
     <Content Include="Images\bike_in_shed.jpg" />
     <Content Include="Images\broken_belt.jpg" />
     <Content Include="Images\chain.jpg" />
+    <Content Include="Images\rowa_logo.jpg" />
     <Content Include="Images\trev.jpg" />
     <Content Include="Images\trev_bikes.jpg" />
     <Content Include="Images\trev_table.jpg" />
