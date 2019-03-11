@@ -135,6 +135,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\IPageVisitRepository.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Migrations\20190311092739_InitialMigration.cs" />
     <Compile Include="Migrations\20190311092739_InitialMigration.designer.cs">
       <DependentUpon>20190311092739_InitialMigration.cs</DependentUpon>
@@ -143,6 +145,8 @@
     <Compile Include="PageVisit.cs" />
     <Compile Include="DatabaseContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\BaseRepository.cs" />
+    <Compile Include="Repositories\PageVisitRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
