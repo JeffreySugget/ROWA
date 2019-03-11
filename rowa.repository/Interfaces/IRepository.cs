@@ -8,6 +8,6 @@ namespace rowa.repository.Interfaces
 {
     public interface IRepository<T> where T : class
     {
-        virtual Task<int> Add(T newItem)
+        Task<int> Add(T newItem);
     }
 }
