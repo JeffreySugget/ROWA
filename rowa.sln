@@ -5,6 +5,8 @@ VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rowa", "rowa\rowa.csproj", "{AD42CE51-B2AE-4443-8F0B-89A4C5E2D0DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "rowa.repository", "rowa.repository\rowa.repository.csproj", "{F2D35AFF-ED32-48B6-97E7-B3D0E93F0026}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{AD42CE51-B2AE-4443-8F0B-89A4C5E2D0DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD42CE51-B2AE-4443-8F0B-89A4C5E2D0DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD42CE51-B2AE-4443-8F0B-89A4C5E2D0DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2D35AFF-ED32-48B6-97E7-B3D0E93F0026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2D35AFF-ED32-48B6-97E7-B3D0E93F0026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2D35AFF-ED32-48B6-97E7-B3D0E93F0026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2D35AFF-ED32-48B6-97E7-B3D0E93F0026}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
