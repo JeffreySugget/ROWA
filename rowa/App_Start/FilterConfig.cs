@@ -1,4 +1,8 @@
-﻿using System.Web;
+﻿using rowa.Filters;
+using rowa.repository.Entites;
+using rowa.repository.Interfaces;
+using rowa.repository.Repositories;
+using System.Web;
 using System.Web.Mvc;
 
 namespace rowa
@@ -8,6 +12,7 @@ namespace rowa
         public static void RegisterGlobalFilters(GlobalFilterCollection filters)
         {
             filters.Add(new HandleErrorAttribute());
+            filters.Add(new PageVisitFilter(new PageVisitRepository()));
         }
     }
 }

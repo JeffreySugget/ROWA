@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace rowa.repository.Interfaces
 {
-    public interface IPageVisitRepository
+    public interface IPageVisitRepository : IRepository<PageVisit>
     {
         Task<int> AddPageVisit(PageVisit pageVisit);
 

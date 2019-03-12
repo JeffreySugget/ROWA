@@ -24,5 +24,10 @@ namespace rowa.repository.Repositories
 
             return id;
         }
+
+        public async virtual void Update(T updatedItem)
+        {
+            await DatabaseContext.SaveChangesAsync();
+        }
     }
 }
