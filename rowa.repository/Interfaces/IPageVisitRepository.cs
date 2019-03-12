@@ -10,5 +10,7 @@ namespace rowa.repository.Interfaces
     public interface IPageVisitRepository
     {
         Task<int> AddPageVisit(PageVisit pageVisit);
+
+        Task<PageVisit> GetPage(string url);
     }
 }
