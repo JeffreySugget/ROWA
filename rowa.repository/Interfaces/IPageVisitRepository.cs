@@ -9,8 +9,6 @@ namespace rowa.repository.Interfaces
 {
     public interface IPageVisitRepository : IRepository<PageVisit>
     {
-        Task<int> AddPageVisit(PageVisit pageVisit);
-
         Task<PageVisit> GetPage(string url);
     }
 }

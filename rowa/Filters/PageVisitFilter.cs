@@ -26,7 +26,7 @@ namespace rowa.Filters
                     VisitCount = 1
                 };
 
-                _pageVisitRepository.AddPageVisit(newPage);
+                _pageVisitRepository.Add(newPage);
             }
             else
             {
