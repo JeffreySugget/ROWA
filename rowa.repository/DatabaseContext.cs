@@ -10,7 +10,7 @@ namespace rowa.repository
 {
     public class DatabaseContext : DbContext
     {
-        public DbSet<PageVisit> PageVist { get; set; }
+        public DbSet<PageVisit> PageVisit { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
