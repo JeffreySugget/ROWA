@@ -17,5 +17,7 @@ namespace rowa.repository.Entites
         public int VisitCount { get; set; }
 
         public string IpAddress { get; set; }
+
+        public DateTime LastVisitedDate { get; set; }
     }
 }
