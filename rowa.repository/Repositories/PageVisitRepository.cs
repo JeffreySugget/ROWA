@@ -13,7 +13,7 @@ namespace rowa.repository.Repositories
     {
         public async Task<PageVisit> GetPage(string url)
         {
-            var page = await DatabaseContext.PageVisit.Where(x => string.Equals(url, x.Url)).FirstOrDefaultAsync();
+            var page = await DatabaseContext.PageVisit.FirstOrDefaultAsync(x => string.Equals(url, x.Url));
 
             return page;
         }
