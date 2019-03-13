@@ -1,4 +1,4 @@
-﻿using rowa.repository.Entites;
+﻿using rowa.repository.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

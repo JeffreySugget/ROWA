@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using rowa.repository.Entites;
+using rowa.repository.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +11,7 @@ namespace rowa.repository
     public class DatabaseContext : DbContext
     {
         public DbSet<PageVisit> PageVisit { get; set; }
+        public DbSet<ErrorLogging> ErrorLogging { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -22,6 +23,11 @@ namespace rowa.repository
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<PageVisit>(en =>
+            {
+                en.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<ErrorLogging>(en =>
             {
                 en.HasKey(e => e.Id);
             });

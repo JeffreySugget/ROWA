@@ -1,5 +1,5 @@
 ﻿using rowa.Filters;
-using rowa.repository.Entites;
+using rowa.repository.Entities;
 using rowa.repository.Interfaces;
 using rowa.repository.Repositories;
 using System.Web;

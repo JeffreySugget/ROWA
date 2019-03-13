@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace rowa.repository.Entites
+namespace rowa.repository.Entities
 {
     public class PageVisit
     {

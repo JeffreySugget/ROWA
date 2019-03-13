@@ -1,4 +1,4 @@
-﻿using rowa.repository.Entites;
+﻿using rowa.repository.Entities;
 using rowa.repository.Interfaces;
 using System;
 using System.Web.Mvc;

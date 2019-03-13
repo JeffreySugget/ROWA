@@ -135,6 +135,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\ErrorLogging.cs" />
     <Compile Include="Interfaces\IPageVisitRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Migrations\20190311092739_InitialMigration.cs" />
