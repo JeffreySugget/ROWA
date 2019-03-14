@@ -150,6 +150,10 @@
     <Compile Include="Migrations\20190313011304_AddedLastVisitedDateColumn.designer.cs">
       <DependentUpon>20190313011304_AddedLastVisitedDateColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190313065635_CreatedErrorLoggingTable.cs" />
+    <Compile Include="Migrations\20190313065635_CreatedErrorLoggingTable.Designer.cs">
+      <DependentUpon>20190313065635_CreatedErrorLoggingTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Entities\PageVisit.cs" />
     <Compile Include="DatabaseContext.cs" />
