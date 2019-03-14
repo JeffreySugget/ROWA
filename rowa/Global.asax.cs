@@ -1,4 +1,6 @@
-﻿using System;
+﻿using rowa.Helpers;
+using rowa.repository.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +23,13 @@ namespace rowa
         protected void Session_Start()
         {
             Session["init"] = 0;
+        }
+
+        protected void Application_Error()
+        {
+            var helper = new ExceptionHelper(new ErrorLoggingRepository());
+
+            helper.LogError(Server.GetLastError());
         }
     }
 }
