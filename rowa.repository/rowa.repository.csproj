@@ -165,6 +165,10 @@
     <Compile Include="Migrations\20190315020927_CreatedPerformanceLogTable.designer.cs">
       <DependentUpon>20190315020927_CreatedPerformanceLogTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190315050257_ChangeColumnType.cs" />
+    <Compile Include="Migrations\20190315050257_ChangeColumnType.designer.cs">
+      <DependentUpon>20190315050257_ChangeColumnType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Entities\PageVisit.cs" />
     <Compile Include="DatabaseContext.cs" />
