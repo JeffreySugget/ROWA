@@ -13,6 +13,7 @@ namespace rowa
         {
             filters.Add(new HandleErrorAttribute());
             filters.Add(new PageVisitFilter(new PageVisitRepository()));
+            filters.Add(new PerformanceFilter());
         }
     }
 }

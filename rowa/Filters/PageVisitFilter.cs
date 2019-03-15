@@ -17,7 +17,8 @@ namespace rowa.Filters
         public override void OnActionExecuted(ActionExecutedContext filterContext)
         {
             var url = filterContext.HttpContext.Request.Url.ToString();
-            var page = _pageVisitRepository.GetPage(url).Result;
+            //var page = _pageVisitRepository.GetPage(url).Result;
+            var page = new PageVisit();
 
             if (RequestIsFromSameSession(filterContext, page, url))
             {
@@ -40,7 +41,7 @@ namespace rowa.Filters
                 page.VisitCount++;
                 page.LastVisitedDate = DateTime.UtcNow;
 
-                _pageVisitRepository.Update(page);
+                //_pageVisitRepository.Update(page);
             }
 
             base.OnActionExecuted(filterContext);

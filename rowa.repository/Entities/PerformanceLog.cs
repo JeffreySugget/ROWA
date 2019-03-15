@@ -22,6 +22,6 @@ namespace rowa.repository.Entities
         [StringLength(200)]
         public string Method { get; set; }
 
-        public string ExecutionTime { get; set; }
+        public double ExecutionTime { get; set; }
     }
 }
