@@ -13,6 +13,8 @@ namespace rowa.repository
         public DbSet<PageVisit> PageVisit { get; set; }
         public DbSet<ErrorLog> ErrorLog { get; set; }
 
+        public DbSet<PerformanceLog> PerformanceLog { get; set; }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder.UseMySQL("server=SERVER;Port=PORT;database=DATABASE;user=USERNAME;password=PASSWORD");
@@ -28,6 +30,11 @@ namespace rowa.repository
             });
 
             modelBuilder.Entity<ErrorLog>(en =>
+            {
+                en.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<PerformanceLog>(en =>
             {
                 en.HasKey(e => e.Id);
             });

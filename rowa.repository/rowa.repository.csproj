@@ -136,6 +136,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\ErrorLog.cs" />
+    <Compile Include="Entities\PerformanceLog.cs" />
     <Compile Include="Interfaces\IErrorLoggingRepository.cs" />
     <Compile Include="Interfaces\IPageVisitRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
@@ -158,6 +159,10 @@
     <Compile Include="Migrations\20190315020233_RenamedErrorLog.cs" />
     <Compile Include="Migrations\20190315020233_RenamedErrorLog.designer.cs">
       <DependentUpon>20190315020233_RenamedErrorLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190315020927_CreatedPerformanceLogTable.cs" />
+    <Compile Include="Migrations\20190315020927_CreatedPerformanceLogTable.designer.cs">
+      <DependentUpon>20190315020927_CreatedPerformanceLogTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Entities\PageVisit.cs" />
