@@ -139,6 +139,7 @@
     <Compile Include="Entities\PerformanceLog.cs" />
     <Compile Include="Interfaces\IErrorLoggingRepository.cs" />
     <Compile Include="Interfaces\IPageVisitRepository.cs" />
+    <Compile Include="Interfaces\IPerformanceLogRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Migrations\20190311092739_InitialMigration.cs" />
     <Compile Include="Migrations\20190311092739_InitialMigration.designer.cs">
@@ -171,6 +172,7 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\ErrorLoggingRepository.cs" />
     <Compile Include="Repositories\PageVisitRepository.cs" />
+    <Compile Include="Repositories\PerformanceLogRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
