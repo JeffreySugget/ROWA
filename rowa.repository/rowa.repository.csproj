@@ -135,7 +135,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\ErrorLogging.cs" />
+    <Compile Include="Entities\ErrorLog.cs" />
     <Compile Include="Interfaces\IErrorLoggingRepository.cs" />
     <Compile Include="Interfaces\IPageVisitRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
@@ -154,6 +154,10 @@
     <Compile Include="Migrations\20190313065635_CreatedErrorLoggingTable.cs" />
     <Compile Include="Migrations\20190313065635_CreatedErrorLoggingTable.Designer.cs">
       <DependentUpon>20190313065635_CreatedErrorLoggingTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190315020233_RenamedErrorLog.cs" />
+    <Compile Include="Migrations\20190315020233_RenamedErrorLog.designer.cs">
+      <DependentUpon>20190315020233_RenamedErrorLog.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Entities\PageVisit.cs" />
