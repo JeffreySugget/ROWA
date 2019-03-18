@@ -11,7 +11,9 @@ namespace rowa.repository
     public class DatabaseContext : DbContext
     {
         public DbSet<PageVisit> PageVisit { get; set; }
-        public DbSet<ErrorLogging> ErrorLogging { get; set; }
+        public DbSet<ErrorLog> ErrorLog { get; set; }
+
+        public DbSet<PerformanceLog> PerformanceLog { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -27,7 +29,12 @@ namespace rowa.repository
                 en.HasKey(e => e.Id);
             });
 
-            modelBuilder.Entity<ErrorLogging>(en =>
+            modelBuilder.Entity<ErrorLog>(en =>
+            {
+                en.HasKey(e => e.Id);
+            });
+
+            modelBuilder.Entity<PerformanceLog>(en =>
             {
                 en.HasKey(e => e.Id);
             });

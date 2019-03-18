@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using rowa.repository;
 
 namespace rowa.repository.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    partial class DatabaseContextModelSnapshot : ModelSnapshot
+    [Migration("20190315020233_RenamedErrorLog")]
+    partial class RenamedErrorLog
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -57,34 +59,6 @@ namespace rowa.repository.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("PageVisit");
-                });
-
-            modelBuilder.Entity("rowa.repository.Entities.PerformanceLog", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Controller")
-                        .IsRequired()
-                        .HasMaxLength(200);
-
-                    b.Property<double>("ExecutionTime");
-
-                    b.Property<string>("Method")
-                        .IsRequired()
-                        .HasMaxLength(200);
-
-                    b.Property<string>("ServerName")
-                        .IsRequired()
-                        .HasMaxLength(200);
-
-                    b.Property<string>("Uri")
-                        .IsRequired()
-                        .HasMaxLength(500);
-
-                    b.HasKey("Id");
-
-                    b.ToTable("PerformanceLog");
                 });
 #pragma warning restore 612, 618
         }

@@ -135,9 +135,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\ErrorLogging.cs" />
+    <Compile Include="Entities\ErrorLog.cs" />
+    <Compile Include="Entities\PerformanceLog.cs" />
     <Compile Include="Interfaces\IErrorLoggingRepository.cs" />
     <Compile Include="Interfaces\IPageVisitRepository.cs" />
+    <Compile Include="Interfaces\IPerformanceLogRepository.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Migrations\20190311092739_InitialMigration.cs" />
     <Compile Include="Migrations\20190311092739_InitialMigration.designer.cs">
@@ -155,6 +157,18 @@
     <Compile Include="Migrations\20190313065635_CreatedErrorLoggingTable.Designer.cs">
       <DependentUpon>20190313065635_CreatedErrorLoggingTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190315020233_RenamedErrorLog.cs" />
+    <Compile Include="Migrations\20190315020233_RenamedErrorLog.designer.cs">
+      <DependentUpon>20190315020233_RenamedErrorLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190315020927_CreatedPerformanceLogTable.cs" />
+    <Compile Include="Migrations\20190315020927_CreatedPerformanceLogTable.designer.cs">
+      <DependentUpon>20190315020927_CreatedPerformanceLogTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190315050257_ChangeColumnType.cs" />
+    <Compile Include="Migrations\20190315050257_ChangeColumnType.designer.cs">
+      <DependentUpon>20190315050257_ChangeColumnType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Entities\PageVisit.cs" />
     <Compile Include="DatabaseContext.cs" />
@@ -162,6 +176,7 @@
     <Compile Include="Repositories\BaseRepository.cs" />
     <Compile Include="Repositories\ErrorLoggingRepository.cs" />
     <Compile Include="Repositories\PageVisitRepository.cs" />
+    <Compile Include="Repositories\PerformanceLogRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

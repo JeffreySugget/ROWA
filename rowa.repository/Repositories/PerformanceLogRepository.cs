@@ -3,7 +3,7 @@ using rowa.repository.Interfaces;
 
 namespace rowa.repository.Repositories
 {
-    public class ErrorLoggingRepository : BaseRepository<ErrorLog>, IErrorLoggingRepository
+    public class PerformanceLogRepository : BaseRepository<PerformanceLog>, IPerformanceLogRepository
     {
 
     }

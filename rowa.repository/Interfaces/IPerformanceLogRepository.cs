@@ -2,7 +2,7 @@
 
 namespace rowa.repository.Interfaces
 {
-    public interface IErrorLoggingRepository : IRepository<ErrorLog>
+    public interface IPerformanceLogRepository : IRepository<PerformanceLog>
     {
 
     }

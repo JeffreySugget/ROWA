@@ -18,7 +18,7 @@ namespace rowa.Helpers
 
         public void LogError(Exception ex, int parentId = 0)
         {
-            var error = new ErrorLogging
+            var error = new ErrorLog
             {
                 Message = ex.Message,
                 StackTrace = ex.StackTrace,

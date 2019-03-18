@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace rowa.repository.Entities
 {
-    public class ErrorLogging
+    public class ErrorLog
     {
         public int Id { get; set; }
 
