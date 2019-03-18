@@ -30,7 +30,7 @@ namespace rowa.Filters
                 {
                     Url = url,
                     VisitCount = 1,
-                    LastVisitedDate = DateTime.UtcNow
+                    LastVisitedDate = DateTime.Now
                 };
 
                 _pageVisitRepository.Add(newPage);
@@ -38,7 +38,7 @@ namespace rowa.Filters
             else
             {
                 page.VisitCount++;
-                page.LastVisitedDate = DateTime.UtcNow;
+                page.LastVisitedDate = DateTime.Now;
 
                 _pageVisitRepository.Update(page);
             }
