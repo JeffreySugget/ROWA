@@ -7,8 +7,11 @@
 <div class="row">
 	<div class="col-md-6" style="padding-top: 100px">
 		<p>Welcome to Riders of Western Australia.</p>
-		<p>To join please go to the @Html.ActionLink("Terms of Membership", "Terms", "Terms") page.</p>
+		<p>To join please go to the Terms of Membership page.</p>
 		<p>Once you have read the terms and click the link at the bottom to be redirected to the Facebook Page.</p>
+		<p>
+			@Html.ActionLink("Terms of Membership", "Terms", "Terms", null, new { @class = "btn btn-primary" })
+		</p>
 	</div>
 	<div class="col-md-6">
 		<img src="~/Images/rowa_logo.jpg" alt="rowa.jpb" class="img-width" />
