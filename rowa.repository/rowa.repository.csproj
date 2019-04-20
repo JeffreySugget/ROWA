@@ -140,6 +140,8 @@
     <Compile Include="Classes\UserHelper.cs" />
     <Compile Include="Entities\ErrorLog.cs" />
     <Compile Include="Entities\PerformanceLog.cs" />
+    <Compile Include="Entities\User.cs" />
+    <Compile Include="Entities\UserRole.cs" />
     <Compile Include="Interfaces\IErrorLoggingRepository.cs" />
     <Compile Include="Interfaces\IPageVisitRepository.cs" />
     <Compile Include="Interfaces\IPerformanceLogRepository.cs" />
@@ -171,6 +173,14 @@
     <Compile Include="Migrations\20190315050257_ChangeColumnType.cs" />
     <Compile Include="Migrations\20190315050257_ChangeColumnType.designer.cs">
       <DependentUpon>20190315050257_ChangeColumnType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190420033102_CreatedUserTables.cs" />
+    <Compile Include="Migrations\20190420033102_CreatedUserTables.designer.cs">
+      <DependentUpon>20190420033102_CreatedUserTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20190420033507_AddUserRoles.cs" />
+    <Compile Include="Migrations\20190420033507_AddUserRoles.designer.cs">
+      <DependentUpon>20190420033507_AddUserRoles.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Entities\PageVisit.cs" />
