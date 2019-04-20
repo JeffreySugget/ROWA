@@ -1,4 +1,5 @@
 using System;
+using rowa.repository.Classes;
 using rowa.repository.Interfaces;
 using rowa.repository.Repositories;
 using Unity;
@@ -44,6 +45,8 @@ namespace rowa
             // TODO: Register your type's mappings here.
             // container.RegisterType<IProductRepository, ProductRepository>();
             container.RegisterType<IPageVisitRepository, PageVisitRepository>();
+            container.RegisterType<IUserRepository, UserRepository>();
+            container.RegisterType<IUserHelper, UserHelper>();
         }
     }
 }
