@@ -136,6 +136,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\IUserHelper.cs" />
+    <Compile Include="Classes\UserHelper.cs" />
     <Compile Include="Entities\ErrorLog.cs" />
     <Compile Include="Entities\PerformanceLog.cs" />
     <Compile Include="Interfaces\IErrorLoggingRepository.cs" />
