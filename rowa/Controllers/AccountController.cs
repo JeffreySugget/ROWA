@@ -49,7 +49,7 @@ namespace rowa.Controllers
         {
             _userHelper.LogOut();
 
-            return RedirectToAction("Index", "Home");
+            return View();
         }
     }
 }
