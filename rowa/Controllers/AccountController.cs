@@ -6,26 +6,26 @@ using System.Web.Mvc;
 
 namespace rowa.Controllers
 {
-    public class SignInController : Controller
+    public class AccountController : Controller
     {
         private IUserRepository _userRepository;
         private IUserHelper _userHelper;
 
-        public SignInController(IUserRepository userRepository, IUserHelper userHelper)
+        public AccountController(IUserRepository userRepository, IUserHelper userHelper)
         {
             _userRepository = userRepository;
             _userHelper = userHelper;
         }
 
         // GET: SignIn
-        public ActionResult Index()
+        public ActionResult LogIn()
         {
             return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<ActionResult> LogIn(SignInModel model)
+        public async Task<ActionResult> LogIn(AccountModel model)
         {
             if (!ModelState.IsValid)
             {

@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Web;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace rowa.Models
 {
-    public class SignInModel
+    public class AccountModel
     {
         [Required(ErrorMessage = "Email is required.")]
         public string Email { get; set; }

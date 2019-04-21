@@ -1,17 +1,10 @@
-﻿@model rowa.Models.SignInModel
-
-@{
-	ViewBag.Title = "SignIn";
-	Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<h2>SignIn</h2>
+﻿@model rowa.Models.AccountModel
 
 <div class="col-md-12">
 	<span class="text-danger">@ViewBag.ErrorMessage</span>
 </div>
 
-@using (Html.BeginForm("LogIn", "SignIn", FormMethod.Post))
+@using (Html.BeginForm("LogIn", "Account", FormMethod.Post))
 {
 	@Html.AntiForgeryToken()
 	<div class="form-group">

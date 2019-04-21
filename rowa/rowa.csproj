@@ -227,7 +227,7 @@
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemorialRideController.cs" />
-    <Compile Include="Controllers\SignInController.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\TermsController.cs" />
     <Compile Include="Filters\PageVisitFilter.cs" />
     <Compile Include="Filters\PerformanceFilter.cs" />
@@ -236,7 +236,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\ExceptionHelper.cs" />
-    <Compile Include="Models\SignInModel.cs" />
+    <Compile Include="Models\AccountModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -328,7 +328,7 @@
     <Content Include="Scripts\popper-utils.min.js.map" />
     <Content Include="Scripts\popper-utils.js.map" />
     <Content Include="Views\Error\NotFound.cshtml" />
-    <Content Include="Views\SignIn\Index.cshtml" />
+    <Content Include="Views\Account\LogIn.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Web;
+﻿using System.Reflection;
 using System.Web.Mvc;
 using System.Web.Routing;
 
@@ -36,8 +32,8 @@ namespace rowa.Filters
                                         new RouteValueDictionary(
                                           new
                                               {
-                                                  controller = "SignIn",
-                                                  action = "Index",
+                                                  controller = "Account",
+                                                  action = "LogIn",
                                                   redirect = filterContext.HttpContext.Request.Url.AbsolutePath
                                               })
                                   });
