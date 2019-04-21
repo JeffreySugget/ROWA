@@ -21,11 +21,6 @@ namespace rowa
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
 
-        protected void Session_Start()
-        {
-            Session["init"] = 0;
-        }
-
         protected void Application_Error()
         {
             var helper = new ExceptionHelper(new ErrorLoggingRepository());
