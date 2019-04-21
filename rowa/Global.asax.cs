@@ -1,12 +1,13 @@
 ﻿using rowa.Helpers;
 using rowa.repository.Repositories;
 using System;
-using System.Collections.Generic;
-using System.Linq;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using System.Web.Security;
+using rowa.repository.Classes;
 
 namespace rowa
 {
@@ -30,6 +31,20 @@ namespace rowa
             var helper = new ExceptionHelper(new ErrorLoggingRepository());
 
             helper.LogError(Server.GetLastError());
+        }
+
+        protected void Application_AuthenticateRequest(object sender, EventArgs e)
+        {
+            HttpCookie authCookie = Request.Cookies[FormsAuthentication.FormsCookieName];
+
+            if (authCookie != null)
+            {
+                FormsAuthenticationTicket authTicket = FormsAuthentication.Decrypt(authCookie.Value);
+                var identity = new GenericIdentity(authTicket.Name, "Forms");
+                var principal = new CustomPrincipal(identity);
+
+                Context.User = principal;
+            }
         }
     }
 }
