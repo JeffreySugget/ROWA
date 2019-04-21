@@ -8,6 +8,6 @@ namespace rowa.repository.Interfaces
 {
     public interface IUserRepository
     {
-        Task<bool> LogIn(string email, string password);
+        Task<bool> AuthenticateUser(string email, string password);
     }
 }

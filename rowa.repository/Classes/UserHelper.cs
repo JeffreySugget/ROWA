@@ -1,9 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
-using System.Threading.Tasks;
+using System.Web;
+using System.Web.Security;
 
 namespace rowa.repository.Classes
 {
@@ -14,6 +13,23 @@ namespace rowa.repository.Classes
             byte[] bytes = Encoding.Unicode.GetBytes(password);
             byte[] inArray = HashAlgorithm.Create("SHA1").ComputeHash(bytes);
             return Convert.ToBase64String(inArray);
+        }
+
+        public void LogIn(string email)
+        {
+            var authTicket = new FormsAuthenticationTicket(1, email, DateTime.Now, DateTime.Now.AddMinutes(30), true, "");
+
+            var cookieContents = FormsAuthentication.Encrypt(authTicket);
+            var cookie = new HttpCookie(FormsAuthentication.FormsCookieName, cookieContents)
+            {
+                Expires = authTicket.Expiration,
+                Path = FormsAuthentication.FormsCookiePath
+            };
+
+            if (HttpContext.Current != null)
+            {
+                HttpContext.Current.Response.Cookies.Add(cookie);
+            }
         }
     }
 }

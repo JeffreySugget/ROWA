@@ -32,10 +32,11 @@ namespace rowa.Controllers
                 return View("Index", model);
             }
 
-            var authed = await _userRepository.LogIn(model.Email, _userHelper.EncryptPassword(model.Password));
+            var userHasAuthenticated = await _userRepository.AuthenticateUser(model.Email, _userHelper.EncryptPassword(model.Password));
 
-            if (authed)
+            if (userHasAuthenticated)
             {
+                _userHelper.LogIn(model.Email);
                 return RedirectToAction("Index", "Home");
             }
 
