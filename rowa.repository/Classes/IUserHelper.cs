@@ -5,5 +5,7 @@
         string EncryptPassword(string password);
 
         void LogIn(string email);
+
+        void LogOut();
     }
 }

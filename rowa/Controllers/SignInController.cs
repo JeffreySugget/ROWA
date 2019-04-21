@@ -44,5 +44,12 @@ namespace rowa.Controllers
 
             return View("Index", model);
         }
+
+        public ActionResult LogOut()
+        {
+            _userHelper.LogOut();
+
+            return RedirectToAction("Index", "Home");
+        }
     }
 }

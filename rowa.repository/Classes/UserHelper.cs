@@ -31,5 +31,10 @@ namespace rowa.repository.Classes
                 HttpContext.Current.Response.Cookies.Add(cookie);
             }
         }
+
+        public void LogOut()
+        {
+            FormsAuthentication.SignOut();
+        }
     }
 }
