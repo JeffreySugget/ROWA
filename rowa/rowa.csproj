@@ -229,6 +229,7 @@
     <Compile Include="Controllers\MemorialRideController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\TermsController.cs" />
+    <Compile Include="Filters\CustomRequireHttpsFilter.cs" />
     <Compile Include="Filters\PageVisitFilter.cs" />
     <Compile Include="Filters\PerformanceFilter.cs" />
     <Compile Include="Filters\UserInRoleAttribute.cs" />
