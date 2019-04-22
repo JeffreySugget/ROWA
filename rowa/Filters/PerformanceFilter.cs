@@ -1,10 +1,7 @@
 ﻿using rowa.repository.Entities;
 using rowa.repository.Interfaces;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
 namespace rowa.Filters
@@ -39,7 +36,8 @@ namespace rowa.Filters
                 Uri = filterContext.HttpContext.Request.Url.ToString(),
                 Controller = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
                 Method = filterContext.ActionDescriptor.ActionName,
-                ExecutionTime = time
+                ExecutionTime = time,
+                RequestDate = DateTime.Now
             };
 
             _performanceLogRepository.Add(performance);

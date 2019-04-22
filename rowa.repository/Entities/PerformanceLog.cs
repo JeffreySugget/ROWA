@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace rowa.repository.Entities
 {
@@ -23,5 +24,7 @@ namespace rowa.repository.Entities
         public string Method { get; set; }
 
         public double ExecutionTime { get; set; }
+
+        public DateTime? RequestDate { get; set; }
     }
 }
