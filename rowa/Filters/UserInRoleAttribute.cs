@@ -1,5 +1,4 @@
-﻿using System.Reflection;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Routing;
 
 namespace rowa.Filters
@@ -17,26 +16,7 @@ namespace rowa.Filters
         {
             if (filterContext.HttpContext.User.IsInRole(_roleName)) return;
 
-            MethodInfo methodInfo = filterContext.Controller.GetType()
-                .GetMethod("RedirectToAction",
-                           BindingFlags.ExactBinding |
-                           BindingFlags.NonPublic |
-                           BindingFlags.Instance, null,
-                           new[]
-                               {
-                                typeof (RouteValueDictionary)
-                               }, null);
-            methodInfo.Invoke(filterContext.Controller,
-                              new object[]
-                                  {
-                                        new RouteValueDictionary(
-                                          new
-                                              {
-                                                  controller = "Account",
-                                                  action = "LogIn",
-                                                  redirect = filterContext.HttpContext.Request.Url.AbsolutePath
-                                              })
-                                  });
+            filterContext.Result = new RedirectToRouteResult(new RouteValueDictionary(new { action = "LogIn", controller = "Account" }));
 
             base.OnActionExecuting(filterContext);
         }
