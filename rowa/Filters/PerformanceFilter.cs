@@ -37,12 +37,25 @@ namespace rowa.Filters
                 Controller = filterContext.ActionDescriptor.ControllerDescriptor.ControllerName,
                 Method = filterContext.ActionDescriptor.ActionName,
                 ExecutionTime = time,
-                RequestDate = DateTime.Now
+                RequestDate = DateTime.Now,
+                IpAddress = GetIpAddress(filterContext)
             };
 
             _performanceLogRepository.Add(performance);
 
             base.OnActionExecuted(filterContext);
+        }
+
+        private string GetIpAddress(ActionExecutedContext filterContext)
+        {
+            var ip = filterContext.HttpContext.Request.ServerVariables["HTTP_X_FORWARDED_FOR"];
+
+            if (ip != null)
+            {
+                return ip;
+            }
+
+            return filterContext.HttpContext.Request.ServerVariables["REMOTE_ADDR"];
         }
     }
 }

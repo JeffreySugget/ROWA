@@ -18,7 +18,7 @@ namespace rowa.repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseMySQL("server=localhost;Port=3306;database=rowa_test;user=sa;password=t&nmeAqL@?mDB8j5");
+            optionsBuilder.UseMySQL("server=localhost;Port=3306;database=rowa;user=sa;password=t&nmeAqL@?mDB8j5");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

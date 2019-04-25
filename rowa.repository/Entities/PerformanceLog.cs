@@ -26,5 +26,7 @@ namespace rowa.repository.Entities
         public double ExecutionTime { get; set; }
 
         public DateTime? RequestDate { get; set; }
+
+        public string IpAddress { get; set; }
     }
 }

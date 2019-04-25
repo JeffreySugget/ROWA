@@ -190,6 +190,10 @@
     <Compile Include="Migrations\20190422082821_AddedRequestDateColumnToPerformanceLog.designer.cs">
       <DependentUpon>20190422082821_AddedRequestDateColumnToPerformanceLog.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20190425011352_Added IpAddress Column.cs" />
+    <Compile Include="Migrations\20190425011352_Added IpAddress Column.designer.cs">
+      <DependentUpon>20190425011352_Added IpAddress Column.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\DatabaseContextModelSnapshot.cs" />
     <Compile Include="Entities\PageVisit.cs" />
     <Compile Include="DatabaseContext.cs" />
