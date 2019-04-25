@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@using rowa.repository.Classes
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -23,6 +24,12 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("Trevor Davies Memorial", "MemorialRideInfo", "MemorialRide")</li>
                     <li>@Html.ActionLink("BBR (Broken Belt Ride)", "RideInfo", "BrokenBeltRide")</li>
+
+                    @if (User.IsInRole(RoleConsts.Admin))
+                    {
+                        <li>@Html.ActionLink("Create Route", "CreateRoute", "RideRoute")</li>
+                    }
+
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
                 </ul>

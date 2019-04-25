@@ -1,0 +1,69 @@
+﻿@model rowa.Models.CreateRouteModel
+
+<h2>Create Ride Route</h2>
+
+<div class="col-md-12">
+    <span class="text-success">@ViewBag.SuccessMessage</span>
+</div>
+
+<div class="col-md-12">
+
+    @using (Html.BeginForm("Create", "RideRoute", FormMethod.Post))
+    {
+        @Html.AntiForgeryToken()
+        <div class="form-group">
+            @Html.LabelFor(model => model.StartPoint)
+            @Html.TextBoxFor(model => model.StartPoint, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.StartPoint, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <label>Way Points</label>
+            <input id="txtWayPoint" type="text" class="form-control" />
+            <br />
+            <button id="btnAdd" type="button" class="btn btn-primary" onclick="addItemToList()">Add</button>
+            <ul id="ulWayPoints">
+                @if (!string.IsNullOrWhiteSpace(Model.WayPoints))
+                {
+                    var points = Model.WayPoints.Split('+');
+
+                    foreach (var p in points)
+                    {
+                        <li>@p</li>
+                    }
+                }
+            </ul>
+            @Html.HiddenFor(model => model.WayPoints)
+            @Html.ValidationMessageFor(model => model.WayPoints, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.EndPoint)
+            @Html.TextBoxFor(model => model.EndPoint, "", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.EndPoint, "", new { @class = "text-danger" })
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    }
+</div>
+
+<script type="text/javascript">
+    function addItemToList() {
+        var ul = document.getElementById("ulWayPoints");
+        var li = document.createElement("li");
+        var textBox = document.getElementById("txtWayPoint");
+        var input = document.getElementById("WayPoints");
+
+        if (textBox.value !== "") {
+            li.appendChild(document.createTextNode(textBox.value));
+            ul.appendChild(li);
+
+            if (input.value == "") {
+                input.value = textBox.value;
+            } else {
+                input.value = input.value + "+" + textBox.value;
+            }
+
+            textBox.value = "";
+        }
+    }
+</script>

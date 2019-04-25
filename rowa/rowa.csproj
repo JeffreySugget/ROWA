@@ -228,6 +228,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MemorialRideController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\RideRouteController.cs" />
     <Compile Include="Controllers\TermsController.cs" />
     <Compile Include="Filters\CustomRequireHttpsFilter.cs" />
     <Compile Include="Filters\PageVisitFilter.cs" />
@@ -238,6 +239,7 @@
     </Compile>
     <Compile Include="Helpers\ExceptionHelper.cs" />
     <Compile Include="Models\AccountModel.cs" />
+    <Compile Include="Models\CreateRouteModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -332,6 +334,7 @@
     <Content Include="Views\Account\LogIn.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Account\LogOut.cshtml" />
+    <Content Include="Views\RideRoute\CreateRoute.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
