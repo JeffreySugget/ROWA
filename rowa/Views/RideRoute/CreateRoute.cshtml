@@ -26,9 +26,9 @@
                 {
                     var points = Model.WayPoints.Split('+');
 
-                    foreach (var p in points)
+                    for (var i = 0; i < points.Length; i++)
                     {
-                        <li>@p</li>
+                        <li id="@i">@points[i] <span title="Remove" class="glyphicon glyphicon-remove" onclick="removeFromList(@i)"></span></li>
                     }
                 }
             </ul>
@@ -65,5 +65,14 @@
 
             textBox.value = "";
         }
+    }
+
+    function removeFromList(id) {
+        var li = document.getElementById(id);
+        var input = document.getElementById("WayPoints");
+
+        li.parentNode.removeChild(li);
+
+        input.value = input.value.toString().replace(li.innerText, '');
     }
 </script>
